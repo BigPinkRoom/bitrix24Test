@@ -28,7 +28,7 @@
   function toggleFixedHeader() {
     let scrollHeight = bxPanel
       ? window.pageYOffset - bxPanel.offsetHeight
-      : window.pageXOffset;
+      : window.pageYOffset;
 
     let introHeight = intro.offsetHeight - header.offsetHeight;
 

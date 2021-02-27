@@ -1,0 +1,46 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Home", 
+		"", 
+		Array(), 
+		Array("DATA-SCROLL"=>"intro"), 
+		"" 
+	),
+	Array(
+		"Services", 
+		"", 
+		Array(), 
+		Array("DATA-SCROLL"=>"services"), 
+		"" 
+	),
+	Array(
+		"Works", 
+		"", 
+		Array(), 
+		Array("DATA-SCROLL"=>"gallery"), 
+		"" 
+	),
+	Array(
+		"About us", 
+		"", 
+		Array(), 
+		Array("DATA-SCROLL"=>"about-us"), 
+		"" 
+	),
+	Array(
+		"Features", 
+		"", 
+		Array(), 
+		Array("DATA-SCROLL"=>"features"), 
+		"" 
+	),
+	Array(
+		"Contact", 
+		"", 
+		Array(), 
+		Array("DATA-SCROLL"=>"contact"), 
+		"" 
+	)
+);
+?>
