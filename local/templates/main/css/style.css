@@ -266,7 +266,6 @@ button::-moz-focus-inner {
 
 .header.fixed {
   position: fixed;
-  top: 0;
 
   margin: 0;
 
@@ -326,6 +325,7 @@ button::-moz-focus-inner {
 
 .nav__link {
   position: relative;
+  padding: 0 0 3px 0;
 
   color: #ffffff;
   font-weight: 500;
@@ -341,7 +341,6 @@ button::-moz-focus-inner {
 
   display: block;
   content: '';
-  margin-top: 3px;
   height: 2px;
   width: 100%;
   opacity: 0;
