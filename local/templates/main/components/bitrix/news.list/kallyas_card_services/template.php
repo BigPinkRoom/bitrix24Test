@@ -14,52 +14,44 @@ $this->setFrameMode(true);
 ?>
 
 <!-- services -->
-<section class="section" id="services">
-  <div class="container">
+<div class="services">
 
-    <div class="services">
-
-      <?$arFilter = Array('IBLOCK_ID' => 1, 'ID'=> 2, 'ACTIVE' => 'Y', 'GLOBAL_ACTIVE' => 'Y', 'SECTION_ACTIVE' => 'Y');?>
-
-      <?$arSelect = Array('UF_INFO_BLOCK_TITLE_FIRST_PART', 'UF_INFO_BLOCK_TITLE_SECOND_PART');?>
-
-      <? $dbItems =  CIBlockSection::GetList(
+  <?$arFilter = Array('IBLOCK_ID' => 1, 'ID'=> 2, 'ACTIVE' => 'Y', 'GLOBAL_ACTIVE' => 'Y', 'SECTION_ACTIVE' => 'Y');?>
+  <?$arSelect = Array('UF_INFO_BLOCK_TITLE_FIRST_PART', 'UF_INFO_BLOCK_TITLE_SECOND_PART');?>
+  <? $dbItems =  CIBlockSection::GetList(
         false,
         $arFilter,
         false,
         $arSelect
       );?>
-      <? $fieldsSections = $dbItems->Fetch()?>
+  <? $fieldsSections = $dbItems->Fetch()?>
 
-      <div class="services__header">
-        <h3 class="services__suptitle"><?=$arResult['SECTION']["PATH"][0]["NAME"]?></h3>
-        <h2 class="services__title"><?=$fieldsSections['UF_INFO_BLOCK_TITLE_FIRST_PART'];?>
-          <span class="services__title--highlight">
-            <?=$fieldsSections['UF_INFO_BLOCK_TITLE_SECOND_PART'];?>
-          </span>
-        </h2>
-        <div class="services__subtitle">Cras sed felis eget velit aliquet sagittis id consectetur. Lectus sit amet est
-          placerat in egestas erat imperdiet sed. Amet nisl purus in mollis nunc sed id semper risus.</div>
+  <div class="services__header">
+    <h3 class="services__suptitle"><?=$arResult['SECTION']["PATH"][0]["NAME"]?></h3>
+    <h2 class="services__title"><?=$fieldsSections['UF_INFO_BLOCK_TITLE_FIRST_PART'];?>
+      <span class="services__title--highlight">
+        <?=$fieldsSections['UF_INFO_BLOCK_TITLE_SECOND_PART'];?>
+      </span>
+    </h2>
+    <div class="services__subtitle">Cras sed felis eget velit aliquet sagittis id consectetur. Lectus sit amet est
+      placerat in egestas erat imperdiet sed. Amet nisl purus in mollis nunc sed id semper risus.</div>
+  </div>
+
+  <div class="services__content">
+    <?foreach($arResult["ITEMS"] as $arItem):?>
+    <div class="services-item">
+
+      <div class="services-item__image">
+        <img class="services-item__icon" src="<?=$arItem['DETAIL_PICTURE']['SRC']?>" alt="">
       </div>
-
-      <div class="services__content">
-        <?foreach($arResult["ITEMS"] as $arItem):?>
-        <div class="services-item">
-
-          <div class="services-item__image">
-            <img class="services-item__icon" src="<?=$arItem['DETAIL_PICTURE']['SRC']?>" alt="">
-          </div>
-          <h3 class="services-item__title"><?=$arItem['NAME']?></h3>
-          <div class="services-item__text">
-            <p><?=$arItem['DETAIL_TEXT']?></p>
-          </div>
-
-        </div>
-        <?endforeach;?>
+      <h3 class="services-item__title"><?=$arItem['NAME']?></h3>
+      <div class="services-item__text">
+        <p><?=$arItem['DETAIL_TEXT']?></p>
       </div>
 
     </div>
-    <!--/.services-->
-
+    <?endforeach;?>
   </div>
-</section>
+
+</div>
+<!--/.services-->
