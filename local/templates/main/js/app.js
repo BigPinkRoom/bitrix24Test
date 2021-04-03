@@ -7,7 +7,6 @@
 
   // Burger menu toggle
   function toggleHeaderBurger() {
-    console.log('test');
     header.classList.toggle('active');
   }
 
@@ -29,6 +28,8 @@
     let scrollHeight = bxPanel
       ? window.pageYOffset - bxPanel.offsetHeight
       : window.pageYOffset;
+
+    console.log(bxPanel, bxPanel.offsetHeight);
 
     let introHeight = intro.offsetHeight - header.offsetHeight;
 
