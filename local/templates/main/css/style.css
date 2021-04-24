@@ -506,13 +506,11 @@ button::-moz-focus-inner {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: -65px;
 }
 
 .services-item {
   width: 25.1%;
-}
-
-.services-item--first {
   margin-bottom: 65px;
 }
 
